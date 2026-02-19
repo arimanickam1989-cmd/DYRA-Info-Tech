@@ -3,321 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DYRA Info Tech | IT Infrastructure Solutions</title>
+<title>Happy Wedding Anniversary</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 <style>
-
-/* ===== GLOBAL ===== */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #e6f6ff, #cceeff, #b3e6ff);
-    color: #0d1b2a;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-section {
-    padding: 100px 0;
+body{
+    height:100vh;
+    overflow:hidden;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    background-size:400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:#fff;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(12px);
-    padding: 15px 0;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
-.logo-text {
-    font-size: 28px;
-    font-weight: 800;
+.container{
+    animation: fadeIn 2s ease forwards;
 }
 
-.logo-text span {
-    color: #ff6a00;
-    text-shadow: 0 3px 6px rgba(255,106,0,0.4);
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
-.logo-sub {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #000;
-    margin-top: -6px;
+.photo{
+    width:280px;
+    height:350px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    margin:20px auto;
+    animation: float 4s ease-in-out infinite;
 }
 
-.navbar a {
-    color: #0d1b2a !important;
-    font-weight: 500;
-    margin-left: 20px;
-    transition: 0.3s;
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.navbar a:hover {
-    color: #ff6a00 !important;
+@keyframes float{
+    0%,100%{transform:translateY(0px);}
+    50%{transform:translateY(-15px);}
 }
 
-/* ===== HERO ===== */
-.hero {
-    text-align: center;
-    padding: 180px 20px 140px 20px;
+h1{
+    font-family:'Dancing Script', cursive;
+    font-size:50px;
+    margin-top:20px;
+    animation: textGlow 2s ease-in-out infinite alternate;
 }
 
-.hero h1 {
-    font-size: 50px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #0d1b2a, #ff8c00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+@keyframes textGlow{
+    from{text-shadow:0 0 10px #fff;}
+    to{text-shadow:0 0 25px #ff69b4;}
 }
 
-.hero p {
-    font-size: 18px;
-    color: #334155;
-    margin-bottom: 30px;
+p{
+    font-size:18px;
+    margin-top:15px;
+    max-width:500px;
+    line-height:1.6;
 }
 
-.btn-main {
-    padding: 14px 35px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 600;
-    background: linear-gradient(145deg, #ff8c00, #ff6a00);
-    color: white;
-    margin: 8px;
-    transition: 0.4s ease;
-    box-shadow: 0 8px 20px rgba(255,106,0,0.4);
+button{
+    margin-top:25px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#ff4b7d;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.btn-main:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(255,106,0,0.6);
+button:hover{
+    background:#ff4b7d;
+    color:#fff;
+    transform:scale(1.1);
 }
 
-/* ===== GLASS 3D CARDS ===== */
-.corporate-card, .service-card {
-    background: rgba(255,255,255,0.9);
-    padding: 35px;
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    transition: 0.4s;
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    bottom:-20px;
+    color:#fff;
+    animation: rise 6s linear infinite;
+    font-size:20px;
 }
 
-.corporate-card:hover, .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+@keyframes rise{
+    0%{transform:translateY(0); opacity:1;}
+    100%{transform:translateY(-100vh); opacity:0;}
 }
-
-.service-card h5 {
-    margin-top: 15px;
-    color: #ff6a00;
-    font-weight: 600;
-}
-
-/* ===== SECTION HEADINGS ===== */
-.section-heading {
-    font-size: 38px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #475569;
-    margin-bottom: 50px;
-}
-
-/* ===== CONTACT ===== */
-.contact-section {
-    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-}
-
-.form-control {
-    border-radius: 12px;
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-}
-
-.form-control:focus {
-    box-shadow: 0 0 10px rgba(255,140,0,0.3);
-    border: 1px solid #ff8c00;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background: #0d1b2a;
-    text-align: center;
-    padding: 25px;
-    color: #ffffff;
-    font-size: 14px;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg fixed-top">
 <div class="container">
+    <div class="photo">
+        <img src="anniversary.jpg" alt="Wedding Anniversary">
+    </div>
 
-<div>
-<div class="logo-text"><span>DYRA</span> Info Tech</div>
-<div class="logo-sub">IT INFRASTRUCTURE SOLUTIONS</div>
+    <h1>Happy Wedding Anniversary 💕</h1>
+    <p>
+        Celebrating the beautiful journey of love, laughter, and togetherness.
+        May this special day bring more happiness and wonderful memories.
+    </p>
+
+    <button onclick="showMessage()">Click for Surprise 🎉</button>
 </div>
 
-<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-<span class="navbar-toggler-icon"></span>
-</button>
+<script>
+function showMessage(){
+    alert("Wishing you a lifetime of love and happiness ❤️");
+}
 
-<div class="collapse navbar-collapse justify-content-end" id="navmenu">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" href="#About us">About us</a></li>
-<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
-</div>
+/* Floating Hearts Animation */
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
 
-</div>
-</nav>
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-<div class="container">
-<h1>Complete IT Infrastructure Solutions</h1>
-<p>Hardware | Servers | Networking | AMC | Technical Support</p>
+setInterval(createHeart, 500);
+</script>
 
-<a href="#About us" class="btn-main">About us</a>
-<a href="#services" class="btn-main">Services</a>
-<a href="#contact" class="btn-main">Contact</a>
-</div>
-</section>
-
-<!-- ===== COMPANY ===== -->
-<section id="company">
-<div class="container">
-
-<h2 class="section-heading">Company Profile</h2>
-<p class="section-subtitle">Reliable IT Infrastructure & Technology Partner</p>
-
-<div class="corporate-card mb-4">
-<h4>About DYRA Info Tech</h4>
-<p>
-DYRA Info Tech is a professional IT infrastructure and hardware solutions provider committed to delivering reliable, scalable, and secure technology services to businesses of all sizes. We specialize in IT hardware supply, server solutions, networking infrastructure, cybersecurity systems, CCTV surveillance, and comprehensive IT support services.
-
-With a strong foundation in technical expertise and customer-focused service, we offer end-to-end solutions — from consultation and system design to installation, configuration, maintenance, and ongoing managed support. Our approach ensures optimized performance, enhanced security, and seamless business operations.
-
-At DYRA Info Tech, we believe technology is the backbone of modern enterprises. Our mission is to transform IT infrastructure into a strategic advantage that drives efficiency, stability, and long-term growth for our clients.</p>
-</div>
-
-<div class="row g-4">
-<div class="col-md-6">
-<div class="corporate-card h-100">
-<h4>Our Vision</h4>
-<p>To become a trusted and strategic IT infrastructure partner recognized for delivering scalable, secure, and future-ready technology solutions that empower businesses to grow with confidence.
-We strive to build long-term relationships through innovation, service excellence, and a commitment to continuous improvement in every solution we deliver.</p>
-</div>
-</div>
-
-<div class="col-md-6">
-<div class="corporate-card h-100">
-<h4>Our Mission</h4>
-<p>To provide cost-effective, high-quality IT hardware and infrastructure solutions supported by reliable technical expertise and proactive service management.
-We are dedicated to ensuring seamless implementation, dependable maintenance, and responsive support that enables our clients to operate efficiently and securely in a dynamic digital environment.</p>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section id="services">
-<div class="container">
-<h2 class="section-heading mb-5">Our Services</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-<div class="service-card">
-<h5>Computer Hardware Solutions</h5>
-<p>Enterprise-grade supply, deployment, and maintenance of desktops, laptops, printers, and IT hardware infrastructure to support business productivity.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="service-card">
-<h5>Server Solutions</h5>
-<p>Design, implementation, and management of secure physical and virtual server environments to ensure reliable data storage and seamless business operations.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="service-card">
-<h5>Networking Solutions</h5>
-<p>Structured LAN, WAN, and wireless network setup with professional router and switch configuration for secure, scalable, and high-performance connectivity.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="service-card">
-<h5>IT Infrastructure Services</h5>
-<p>End-to-end infrastructure planning, deployment, and management including servers, networking, storage, and data center solutions.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="service-card">
-<h5>Managed IT Services</h5>
-<p>Proactive IT management, system monitoring, preventive maintenance, and Annual Maintenance Contracts (AMC) to minimize downtime and maximize efficiency.</p>
-</div>
-</div>
-
-
-<div class="col-md-4">
-<div class="service-card">
-<h5>Networking Solutions</h5>
-<p>Structured LAN, WAN, and wireless network setup with professional router and switch configuration for secure, scalable, and high-performance connectivity.</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="contact-section">
-<div class="container">
-<h2 class="section-heading mb-4">Contact Us</h2>
-
-<div class="row justify-content-center">
-<div class="col-md-6">
-
-<form>
-<input type="text" class="form-control mb-3" placeholder="Your Name">
-<input type="email" class="form-control mb-3" placeholder="Your Email">
-<textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
-<button class="btn-main w-100">Send Message</button>
-</form>
-
-<div class="text-center mt-4">
-<p><strong>Call:</strong> 6374525644</p>
-<p><strong>Email:</strong> dyra03010527@gmail.com</p>
-<p><strong>Location:</strong> Namakkal, Tamil Nadu</p>
-</div>
-
-</div>
-</div>
-</div>
-</section>
-
-<footer>
-© 2025 DYRA Info Tech | All Rights Reserved
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
