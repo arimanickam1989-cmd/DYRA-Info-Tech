@@ -9,7 +9,7 @@
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* ===== GLOBAL overall text colour and bg color ===== */
 body {
     margin: 0;.
     font-family: 'Segoe UI', sans-serif;
@@ -82,8 +82,13 @@ section {
     box-shadow: 0 5px 25px rgba(0,0,0,0.05);
 }
 
+
+.navbar-brand img {
+    object-fit: contain;
+}
+
 .logo-text {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 800;
 }
 
@@ -112,6 +117,43 @@ section {
 
 /* ===== HERO ===== */
 
+.hero {
+    text-align: center;
+    padding: 180px 20px 140px 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #2563EB, #2563EB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #334155;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    padding: 14px 35px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(145deg, #2563EB, #2563EB);
+    color: white;
+    margin: 8px;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 20px rgba(255,106,0,0.4);
+}
+
+.btn-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255,106,0,0.6);
+}
+
+
 
 
 
@@ -137,10 +179,12 @@ section {
     padding: 180px 20px 140px 20px;
 }
 
+/* ===== change the colour for complete it infrastructure   and contact us send message button color change ===== */
+
 .hero h1 {
     font-size: 60px;
     font-weight: bold;
-    background: linear-gradient(90deg, #0d1b2a, #ff8c00);
+    background: linear-gradient( #008000, #008000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -168,7 +212,7 @@ section {
     box-shadow: 0 12px 25px rgba(255,106,0,0.6);
 }
 
-/* ===== CARDS ===== */
+/* ===== CARDS Services headlines colour changing ex:hardware solution  ===== */
 .corporate-card, .service-card {
     background: rgba(255,255,255,0.9);
     padding: 35px;
@@ -185,11 +229,11 @@ section {
 
 .service-card h5 {
     margin-top: 15px;
-    color: #ff6a00;
+    color: #2563EB;
     font-weight: 600;
 }
 
-/* ===== SECTION HEADINGS ===== */
+/* ===== SECTION HEADINGS colour changing for Reliable IT Infrastructure & Technology Partner ===== */
 .section-heading {
     font-size: 38px;
     font-weight: 800;
@@ -199,11 +243,11 @@ section {
 
 .section-subtitle {
     text-align: center;
-    color: #475569;
+    color: #2563EB;
     margin-bottom: 50px;
 }
 
-/* ===== CONTACT ===== */
+/* ===== CONTACT us background colour change ===== */
 .contact-section {
     background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
 }
@@ -211,7 +255,7 @@ section {
 .form-control {
     border-radius: 12px;
     padding: 12px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #2563EB;
 }
 
 .form-control:focus {
@@ -237,10 +281,17 @@ footer {
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container">
 
-<div>
-<div class="logo-text"><span>DYRA</span> Info Tech</div>
-<div class="logo-sub">IT INFRASTRUCTURE SOLUTIONS</div>
-</div>
+
+<a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="images/logo.jpg" alt="DYRA Info Tech Logo" width="60" height="60" class="me-2">
+    <div>
+        <div class="logo-text"><span>DYRA</span> Info Tech</div>
+        <div class="logo-sub">IT INFRASTRUCTURE SOLUTIONS</div>
+    </div>
+</a>
+
+
+
 
 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
 <span class="navbar-toggler-icon"></span>
