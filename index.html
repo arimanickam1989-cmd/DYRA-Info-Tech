@@ -9,6 +9,30 @@
 
 <style>
 
+
+/* ===== SERVICES DROPDOWN MENU ===== */
+
+.dropdown-menu{
+border-radius:15px;
+padding:10px 20px;
+min-width:220px;
+}
+
+.dropdown-item{
+padding:10px 20px;
+font-weight:500;
+color:#FFFFFF;
+transition:0.3s;
+}
+
+.dropdown-item:hover{
+background:#FFFFFF;
+color:white;
+padding-left:25px;
+}
+
+
+
 /* ===== GLOBAL overall text colour and bg color ===== */
 body {
     margin: 0;.
@@ -117,44 +141,6 @@ section {
 
 /* ===== HERO ===== */
 
-.hero {
-    text-align: center;
-    padding: 180px 20px 140px 20px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #2563EB, #2563EB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #334155;
-    margin-bottom: 30px;
-}
-
-.btn-main {
-    padding: 14px 35px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 600;
-    background: linear-gradient(145deg, #2563EB, #2563EB);
-    color: white;
-    margin: 8px;
-    transition: 0.4s ease;
-    box-shadow: 0 8px 20px rgba(255,106,0,0.4);
-}
-
-.btn-main:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(255,106,0,0.6);
-}
-
-
-
 
 
 
@@ -212,6 +198,30 @@ section {
     box-shadow: 0 12px 25px rgba(255,106,0,0.6);
 }
 
+.service-card{
+    text-align:center;
+    padding:20px;
+    border-radius:10px;
+    background:#f8f9fa;
+    position:relative;
+}
+
+.service-img{
+    width:100%;
+    margin-top:15px;
+    display:none;
+    border-radius:8px;
+}
+
+/* Show image when hover or touch */
+.service-card:hover .service-img{
+    display:block;
+}
+
+
+
+
+
 /* ===== CARDS Services headlines colour changing ex:hardware solution  ===== */
 .corporate-card, .service-card {
     background: rgba(255,255,255,0.9);
@@ -232,6 +242,43 @@ section {
     color: #2563EB;
     font-weight: 600;
 }
+
+
+
+
+
+.service-box{
+    position: relative;
+    width: 375px;
+}
+
+.service-box img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Text overlay */
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 30px;
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+/* Show text when hover */
+.service-box:hover .overlay{
+    opacity: 5;
+}
+
+
+
+
 
 /* ===== SECTION HEADINGS colour changing for Reliable IT Infrastructure & Technology Partner ===== */
 .section-heading {
@@ -301,7 +348,32 @@ footer {
 <ul class="navbar-nav">
 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+
+
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+Services
+</a>
+
+<ul class="dropdown-menu shadow border-0">
+
+<li><a class="dropdown-item" href="#services">All Services</a></li>
+
+<li><hr class="dropdown-divider"></li>
+
+<li><a class="dropdown-item" href="hardware.html">Hardware Solutions</a></li>
+<li><a class="dropdown-item" href="server.html">Server Solutions</a></li>
+<li><a class="dropdown-item" href="network.html">Networking Solutions</a></li>
+<li><a class="dropdown-item" href="infrastructure.html">IT Infrastructure</a></li>
+<li><a class="dropdown-item" href="managed.html">Managed IT Services</a></li>
+<li><a class="dropdown-item" href="security.html">Security & Surveillance</a></li>
+<li><a class="dropdown-item" href="ofc.html">OFC Solutions</a></li>
+
+</ul>
+</li>
+
+
 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
 </div>
@@ -325,18 +397,37 @@ footer {
 
 <div class="col-lg-4 col-md-6">
 <div class="premium-box">
-<img src="images/hardware.jpg" alt="Hardware">
+<img src="images/Fib.jpg" alt="Hardware">
 <div class="premium-overlay">
-<h5>Hardware Solutions</h5>
+<h5>OFC Solutions</h5>
+
+<div class="service-box">
+    <div class="overlay">
+        <h4>Fiber Network Maintenance</h4>
+        <p>We provide reliable Optical Fiber Cable (OFC) solutions for high-speed and secure network connectivity.</p>
+    </div>
+</div>
+
+
 </div>
 </div>
 </div>
+
+
 
 <div class="col-lg-4 col-md-6">
 <div class="premium-box">
 <img src="images/server.jpg" alt="Servers">
 <div class="premium-overlay">
 <h5>Server Infrastructure</h5>
+
+<div class="service-box">
+    <div class="overlay">
+        <h4>Fiber Network Maintenance</h4>
+        <p>Reliable monitoring and maintenance for high-performance optical fiber networks.</p>
+    </div>
+</div>
+
 </div>
 </div>
 </div>
@@ -346,6 +437,15 @@ footer {
 <img src="images/networking.jpg" alt="Networking">
 <div class="premium-overlay">
 <h5>Networking Solutions</h5>
+
+<div class="service-box">
+    <div class="overlay">
+        <h4>Fiber Network Maintenance</h4>
+        <p>Reliable monitoring and maintenance for high-performance optical fiber networks.</p>
+    </div>
+</div>
+
+
 </div>
 </div>
 </div>
@@ -355,6 +455,15 @@ footer {
 <img src="images/amc.jpg" alt="AMC">
 <div class="premium-overlay">
 <h5>AMC Services</h5>
+
+<div class="service-box">
+    <div class="overlay">
+        <h4>Fiber Network Maintenance</h4>
+        <p>Reliable monitoring and maintenance for high-performance optical fiber networks.</p>
+    </div>
+</div>
+
+
 </div>
 </div>
 </div>
@@ -364,6 +473,15 @@ footer {
 <img src="images/support.jpg" alt="Support">
 <div class="premium-overlay">
 <h5>Technical Support</h5>
+
+<div class="service-box">
+    <div class="overlay">
+        <h4>Fiber Network Maintenance</h4>
+        <p>Reliable monitoring and maintenance for high-performance optical fiber networks.</p>
+    </div>
+</div>
+
+
 </div>
 </div>
 </div>
@@ -373,6 +491,15 @@ footer {
 <img src="images/security.jpg" alt="Security">
 <div class="premium-overlay">
 <h5>Security & Surveillance</h5>
+
+<div class="service-box">
+    <div class="overlay">
+        <h4>Fiber Network Maintenance</h4>
+        <p>Reliable monitoring and maintenance for high-performance optical fiber networks.</p>
+    </div>
+</div>
+
+
 </div>
 </div>
 </div>
@@ -422,13 +549,13 @@ At DYRA Info Tech, we believe technology is the backbone of modern enterprises. 
 <section id="services">
 <div class="container">
 <h2 class="section-heading mb-5">Our Services</h2>
-
 <div class="row g-4">
 
 <div class="col-md-4">
 <div class="service-card">
-<h5>Computer Hardware Solutions</h5>
-<p>Enterprise-grade supply, deployment, and maintenance of desktops, laptops, printers, and IT hardware infrastructure to support business productivity.</p>
+<h5>OFC Solutions (Optical Fiber Cable)</h5>
+<p>We provide professional Optical Fiber Cable (OFC) installation, splicing, and testing services to ensure high-speed and reliable network connectivity.</p>
+<img src="images/ofc.jpg" class="service-img">
 </div>
 </div>
 
@@ -436,6 +563,7 @@ At DYRA Info Tech, we believe technology is the backbone of modern enterprises. 
 <div class="service-card">
 <h5>Server Solutions</h5>
 <p>Design, implementation, and management of secure physical and virtual server environments to ensure reliable data storage and seamless business operations.</p>
+<img src="images/server.jpg" class="service-img">
 </div>
 </div>
 
@@ -443,6 +571,7 @@ At DYRA Info Tech, we believe technology is the backbone of modern enterprises. 
 <div class="service-card">
 <h5>Networking Solutions</h5>
 <p>Structured LAN, WAN, and wireless network setup with professional router and switch configuration for secure, scalable, and high-performance connectivity.</p>
+<img src="images/net.jpg" class="service-img">
 </div>
 </div>
 
@@ -451,7 +580,7 @@ At DYRA Info Tech, we believe technology is the backbone of modern enterprises. 
 <h5>IT Infrastructure Services</h5>
 <p>We provide end-to-end IT infrastructure solutions. Our services include planning, deployment, and management of servers,storage, and data center environments.
 </p>
-
+<img src="images/infra.jpg" class="service-img">
 </div>
 </div>
 
@@ -459,17 +588,29 @@ At DYRA Info Tech, we believe technology is the backbone of modern enterprises. 
 <div class="service-card">
 <h5>Managed IT Services</h5>
 <p>Proactive IT management, system monitoring, preventive maintenance, and Annual Maintenance Contracts (AMC) to minimize downtime and maximize efficiency.</p>
+<img src="images/manage.jpg" class="service-img">
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-card">
+<h5>Computer Hardware Solutions</h5>
+<p>Enterprise-grade supply, deployment, and maintenance of desktops, laptops, printers, and IT hardware infrastructure to support business productivity.</p>
+<img src="images/hard.jpg" class="service-img">
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="service-card"> 
-<h5>Networking Solutions</h5> 
-<p>Structured LAN, WAN, and wireless network setup with professional router and switch configuration for secure, scalable, and high-performance connectivity.</p> </div> </div>
-
+<h5>CCTV Security & Surveillance</h5> 
+<p>We provide professional CCTV installation and advanced surveillance solutions to ensure complete security for offices, businesses, and residential spaces.</p>
+<img src="images/sec.jpg" class="service-img">
+ </div> </div>
 </div>
 </div>
 </section>
+
+
 
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="contact-section">
@@ -479,11 +620,21 @@ At DYRA Info Tech, we believe technology is the backbone of modern enterprises. 
 <div class="row justify-content-center">
 <div class="col-md-6">
 
-<form>
-<input type="text" class="form-control mb-3" placeholder="Your Name">
-<input type="email" class="form-control mb-3" placeholder="Your Email">
-<textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
-<button class="btn-main w-100">Send Message</button>
+<form action="save_contact.php" method="POST">
+
+<input type="text" name="name" class="form-control mb-3" 
+placeholder="Your Name" required>
+
+<input type="email" name="email" class="form-control mb-3" 
+placeholder="Your Email" required>
+
+<textarea name="message" class="form-control mb-3" rows="4" 
+placeholder="Your Message" required></textarea>
+
+<button type="submit" class="btn-main w-100">
+Send Message
+</button>
+
 </form>
 
 <div class="text-center mt-4">
